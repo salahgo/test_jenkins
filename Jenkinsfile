@@ -1,20 +1,20 @@
-pipeline{
+pipeline {
     agent any
 
-    stages{
-        stage("Stage 1"){
+    stages {
+        stage("Stage 1") {
             steps {
                 echo "This is stage 1..."
             }
         }
-        stage("Stage 2"){
+        stage("Stage 2") {
             steps {
                 echo "This is stage 2..."
             }
         }
-        stage("Stage 3"){
-            steps{
-                sh "docker run hello-world"
+        stage("Stage 3") {
+            steps {
+                sh 'docker run alpine echo "Hello from Docker!"'
             }
         }
     }
